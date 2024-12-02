@@ -1,0 +1,108 @@
+/*
+Theme Name: PlastiCommerce
+Theme URI: http://plastimedia.com
+Description: Tema creado para e-Commerce.
+Author: Plastimedia
+Author URI: http://plastimedia.com
+Version: 1.0.0
+*/
+
+
+.wc-block-mini-cart__footer .wc-block-mini-cart__footer-actions a:last-child{
+	display: none;
+}
+
+.__WppBtn_fixed{
+	z-index: 1000000 !important;
+}
+.container-menu .container-menu-buscador .buscador form div input[type="search"]::placeholder{
+    color: black !important;
+}
+.container-menu .container-menu-buscador .buscador form div button{
+    background-color: #98c12e !important;
+}
+.producto > .content .discount-tag{
+    display: none !important;
+}
+.producto .thumbnail > img, .producto .thumbnail > video, .producto .thumbnail > a img, .producto .thumbnail > a video{
+        top: 0 !important;
+    transform: translateY(0) !important;
+    position: relative !important;
+    margin: 0 !important;
+}
+.producto .content-text{
+    background: white;
+    padding-bottom: 10px;
+    position: relative !important;
+}
+.nuevos-productos .producto .thumbnail:before, .producto .thumbnail::before{
+    display: none !important;
+}
+.producto > .content{
+    height: auto !important;
+}
+
+    
+@media only screen and (max-width: 720px) {
+	.seccion_contador .wp-block-ctb-countdown-time .countdownItems{
+		    width: 100%;
+    		flex-direction: row !important; 
+	}
+	.seccion_contador .wp-block-columns{
+		gap: 0 !important;
+	}
+}
+@media screen and (max-width: 768px) {
+    .container-menu .container-menu-buscador .buscador form{
+        display: none !important;
+    }
+    .container-menu .options_shop .cart .btn-cart, .container-menu .options_shop .account {
+       
+         filter: invert(0) !important; 
+        margin: 0;
+    }
+    header .ancho .options_shop{
+                background: #9e9e9e !important;
+    }
+	
+	#ModalSearch form div button{
+		    background-color: #98C12E !important;
+	}
+	#ModalSearch form div input[type="search"]{
+		    border: 2px solid #98C12E !important;
+	}
+	#ModalSearch form div input[type="search"]::placeholder{
+		    color: #000000 !important;
+	}
+	.producto .thumbnail > img{
+	    top: 0 !important;
+	    transform: translateY(0) !important;
+	    position: relative !important;
+	    border-radius: 30px 30px 0 0;
+	}
+	.nuevos-productos .producto .thumbnail:before {
+        padding-top: 0 !important;
+    }
+    .producto > .content{
+        background: transparent;
+    }
+    .producto .thumbnail::after{
+        opacity: 0 !important;
+    }
+    .producto .content-text{
+        position : relative !important;
+        padding: 15px 0 !important;
+        background: white !important;
+        border-radius: 0 0 30px 30px;
+    }
+    .producto{
+        border: none !important;
+    }
+    .producto .thumbnail::before{
+        padding: 0 !important;
+    }
+    .woocommerce ul.products li.product a img{
+        margin: 0 !important;
+    }
+	
+}

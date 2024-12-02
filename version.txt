@@ -1,0 +1,29 @@
+##############################################
+
+// versión: 1.0
+// caracteristicas
+
+- plastiCommerce creado
+- archivo versiones
+- widgets dinámicos a través de array de configuración
+- menus dinámicos a través de arrays de configuración
+- Optimización del functions.php 
+- Optimización de archivos head.php, index.php, footer.php
+- carga de archivos de estilos por encolamiento del ciclo de wordpress
+- carga de archivos js por encolamiento del ciclo de wordpress
+- nueva distribución de carpetas
+- theme support titulo del sitio web
+- theme support logo personalizable
+- templaste partials
+- Borrado de archivos y templates innecesarios 
+- estilos scroll
+- mixins cajaproporcional (crea cajas con un tamaño proporcional yno modifica las imagenes internas)
+- mixins cajaloop (crea una caja proporcional que las imagenes tomen su 100% o cover aunque esta tenga un <a>)
+- splash por defecto
+- bug Sticky menu solucionado
+- solución bug widget footer 
+- librería basic Scroll para parallax instalada
+- paginas internas y  entradas con nuevo template (título, img_sec, parallax animation)
+- paginas internas (page, single) sin ancho para una mejor de edición
+- imagen portada plasti Commerce
+
