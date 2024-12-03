@@ -1540,7 +1540,6 @@ body.category main {
   position: relative;
 }
 .producto > .content {
-  background: #c8c9c9;
   position: relative;
   overflow: hidden;
 }
@@ -2909,7 +2908,7 @@ main .video_corporativo .content .wp-block-columns .wp-block-column p {
 }
 main.shopPage {
   padding-bottom: 60px;
-  padding-top: 88px;
+  padding-top: 150px;
 }
 main.shopPage .migas {
   background: #fff;
@@ -3246,12 +3245,11 @@ main.shopPage section.contenido {
 }
 main.shopPage section.contenido h1 {
   display: block;
-  text-align: center;
   font-weight: 600;
   margin-bottom: 5px;
   font-size: 30.6px;
   font-size: 1.8rem;
-  color: #33BCAD;
+  color: black;
   font-family: "Roboto", sans-serif;
 }
 main.shopPage section.contenido .term-description {
@@ -3554,6 +3552,9 @@ main.shopPage section.contenido .productPage .summary .cart_b2b .groupquantity >
 main.shopPage section.contenido .productPage .summary .cart .quantity,
 main.shopPage section.contenido .productPage .summary .cart_b2b .quantity {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 main.shopPage section.contenido .productPage .summary .cart .quantity input,
 main.shopPage section.contenido .productPage .summary .cart_b2b .quantity input {
@@ -8128,6 +8129,16 @@ span.woocommerce-input-wrapper {
           align-items: center;
   gap: 50px;
 }
+.woocommerce div.product form.cart div.quantity {
+  float: left;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.woocommerce div.product form.cart div.quantity input.qty {
+  margin: 0 5px;
+}
 .sticky-wrapper {
   max-height: 0;
   display: table;
@@ -8173,11 +8184,6 @@ header::before {
 }
 .fijo header nav.el-menu .menu-ppl ul li a {
   color: black !important;
-}
-.fijo header .options_shop .account:before,
-.fijo header .options_shop .cart .btn-cart {
-  -webkit-filter: contrast(0) grayscale(1) brightness(0) invert(1) !important;
-          filter: contrast(0) grayscale(1) brightness(0) invert(1) !important;
 }
 .fijo header .buscador .logo {
   display: none;
@@ -8710,18 +8716,16 @@ header::before {
 .container-menu .options_shop .account::before {
   content: '';
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin-right: 7px;
   vertical-align: middle;
-  background-image: url('../images/account.svg');
+  background-image: url('../images/icon_user.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-filter: contrast(0) grayscale(1) brightness(0) invert(1) !important;
-          filter: contrast(0) grayscale(1) brightness(0) invert(1) !important;
 }
 .container-menu .options_shop .wishlist {
   display: inline-block;
@@ -8730,20 +8734,12 @@ header::before {
   height: 30px;
   position: relative;
   margin-right: 10px;
-  background-image: url('../images/star.svg');
+  background-image: url('../images/lista-deseos.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-.container-menu .options_shop .wishlist:hover {
-  -webkit-filter: brightness(1.4);
-          filter: brightness(1.4);
-}
-.container-menu .options_shop .wishlist:hover span {
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
 }
 .container-menu .options_shop .wishlist span {
   display: block;
@@ -8769,7 +8765,7 @@ header::before {
   display: block;
   width: 30px;
   height: 30px;
-  background-image: url('../images/cart.svg');
+  background-image: url('../images/carrito.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
