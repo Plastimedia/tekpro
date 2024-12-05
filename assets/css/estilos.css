@@ -3572,7 +3572,8 @@ main.shopPage section.contenido .productPage .summary .cart_b2b .quantity button
   width: 50px;
   height: 30px;
   display: block;
-  color: #000000;
+  color: gray;
+  background-color: transparent;
   border-radius: 7px 0 0 7px;
   text-align: center;
   line-height: 8px;
@@ -3587,7 +3588,8 @@ main.shopPage section.contenido .productPage .summary .cart_b2b .quantity button
 }
 main.shopPage section.contenido .productPage .summary .cart .quantity button:hover,
 main.shopPage section.contenido .productPage .summary .cart_b2b .quantity button:hover {
-  background: #E9DA7F;
+  background: #5DC4E9;
+  color: white;
 }
 main.shopPage section.contenido .productPage .summary .cart button,
 main.shopPage section.contenido .productPage .summary .cart_b2b button {
@@ -3614,9 +3616,10 @@ main.shopPage section.contenido .productPage .summary .cart_b2b button.wpcbn-btn
 main.shopPage section.contenido .productPage .summary .cart button.single_add_to_cart_button,
 main.shopPage section.contenido .productPage .summary .cart_b2b button.single_add_to_cart_button {
   border-radius: 7px;
-  background-color: #E9DA7F;
+  background-color: #5DC4E9;
   font-weight: 700;
-  color: #3E3539;
+  color: white;
+  padding: 20px;
 }
 main.shopPage section.contenido .productPage .summary .cart button.single_add_to_cart_button:hover::before,
 main.shopPage section.contenido .productPage .summary .cart_b2b button.single_add_to_cart_button:hover::before {
@@ -7959,7 +7962,7 @@ span.woocommerce-input-wrapper {
 }
 .archive .producto,
 .single-product .producto {
-  background-color: #EFEFEF;
+  background-color: transparent;
   border-radius: 15px;
 }
 .archive .producto .thumbnail::after,
@@ -7983,8 +7986,8 @@ span.woocommerce-input-wrapper {
 }
 .archive .producto .botones2 .read,
 .single-product .producto .botones2 .read {
-  color: #3E3539;
-  background-color: #e1e888;
+  color: white;
+  background-color: #5DC4E9;
   font-size: 17px;
   font-size: 1rem;
   font-weight: 700;
