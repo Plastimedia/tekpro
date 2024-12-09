@@ -692,8 +692,23 @@
 
     // opciones de vista de productos en tienda
     
-        
+   //Pestaña de descripcion larga y reseñas 
+   remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+   //Pestaña de descripcion larga y reseñas
 
+   //Nueva seccion de caracteristicas
+   add_action('woocommerce_after_single_product_summary', 'caracteristicas_productos', 10);
+
+   function caracteristicas_productos() {
+       echo '<div class="caracteristicas-products">';
+       echo '<h2>Caracteristicas del producto</h2>';
+       echo '<p>UI kit can be used for virtually all your projects, just reduce to zero the component searching step.</p>';
+       echo '</div>';
+   }
+   //Crear, guardar y mostrar campos de caracteristicas
+
+   //Crear, guardar y mostrar campos de caracteristicas
+   //Nueva sección de caracteristicas
     // productos destacados
         // remuevo el normalito
         // remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',20);

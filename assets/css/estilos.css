@@ -3402,7 +3402,7 @@ main.shopPage section.contenido .productPage .lasimagenes figure div {
 }
 main.shopPage section.contenido .productPage .summary {
   width: 40%;
-  padding: 50px;
+  padding: 50px 50px 0;
 }
 main.shopPage section.contenido .productPage .summary h1 {
   color: black;
@@ -3714,6 +3714,13 @@ main.shopPage section.contenido .productPage .summary .sharedaddy .robots-nocont
 }
 main.shopPage section.contenido .productPage .contenidogeneral {
   width: 100%;
+}
+main.shopPage section.contenido .productPage .caracteristicas-products {
+  text-align: center;
+}
+main.shopPage section.contenido .productPage .caracteristicas-products h2 {
+  color: black;
+  font-weight: 600;
 }
 main.shopPage section.contenido .productPage .woocommerce-tabs {
   display: block;
