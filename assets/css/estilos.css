@@ -8445,6 +8445,7 @@ header::before {
   font-weight: 500;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  letter-spacing: 2px;
 }
 .container-menu .container-menu-buscador nav.el-menu .menu-ppl li.menu-categorias {
   position: relative;
