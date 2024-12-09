@@ -1038,19 +1038,19 @@ add_filter( 'posts_search', 'custom_search_by_sku', 10, 2 );
 
 
 
-// Añadir un botón de "Compra rápida" en la página de producto
-add_action('woocommerce_after_add_to_cart_button', 'quick_buy_button');
+// // Añadir un botón de "Compra rápida" en la página de producto
+// add_action('woocommerce_after_add_to_cart_button', 'quick_buy_button');
 
 
-function quick_buy_button() {
-    global $product;
+// function quick_buy_button() {
+//     global $product;
     
-    // URL para agregar el producto al carrito y redirigir a la página de pago
-    $quick_buy_url = wc_get_checkout_url() . '?add-to-cart=' . $product->get_id();
+//     // URL para agregar el producto al carrito y redirigir a la página de pago
+//     $quick_buy_url = wc_get_checkout_url() . '?add-to-cart=' . $product->get_id();
     
-    // Botón de "Compra rápida"
-    echo '<button class="single_add_to_cart_button button alt"><a href="' . esc_url($quick_buy_url) . '" class="">Comprar ahora</a></button>';
-}
+//     // Botón de "Compra rápida"
+//     echo '<button class="single_add_to_cart_button button alt"><a href="' . esc_url($quick_buy_url) . '" class="">Comprar ahora</a></button>';
+// }
 
 
 

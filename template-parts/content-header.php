@@ -52,7 +52,9 @@
             
             <a class="busquedas" data-toggle="modal" data-target="#ModalSearch" href="#"></a>
 
-            
+            <div class="wish-list">
+                    <a href="#" class="wishlist">Lista deseos</a>
+            </div>  
 
             <div class="cart">
                 <span class="btn-cart">

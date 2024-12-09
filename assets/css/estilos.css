@@ -3405,7 +3405,7 @@ main.shopPage section.contenido .productPage .summary {
   padding: 50px;
 }
 main.shopPage section.contenido .productPage .summary h1 {
-  color: #33BCAD;
+  color: black;
   text-align: left;
   font-size: 30.6px;
   font-size: 1.8rem;
@@ -8691,7 +8691,6 @@ header::before {
   transition: all 0.2s ease-out;
 }
 .container-menu .options_shop {
-  width: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8712,7 +8711,6 @@ header::before {
   text-align: center;
   font-weight: 200;
   text-decoration: none;
-  margin-right: 10px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -8743,6 +8741,7 @@ header::before {
   background-size: 90%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  font-size: 0;
 }
 .container-menu .options_shop .wishlist span {
   display: block;
