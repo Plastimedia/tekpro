@@ -706,9 +706,96 @@
        echo '</div>';
    }
    //Crear, guardar y mostrar campos de caracteristicas
+// Registrar campos personalizados para características del producto
+function registrar_meta_caracteristicas_producto() {
+    add_meta_box(
+        'caracteristicas_producto', // ID único del meta box
+        'Características del Producto', // Título del meta box
+        'mostrar_meta_caracteristicas_producto', // Callback para mostrar el contenido
+        'product', // Tipo de post donde aparecerá (productos)
+        'normal', // Ubicación en la pantalla de edición
+        'default' // Prioridad
+    );
+}
+add_action('add_meta_boxes', 'registrar_meta_caracteristicas_producto');
 
+// Mostrar los campos en el Meta Box
+function mostrar_meta_caracteristicas_producto($post) {
+    // Obtener valores previos si existen
+    $caracteristica_1 = get_post_meta($post->ID, '_caracteristica_1', true);
+    $caracteristica_2 = get_post_meta($post->ID, '_caracteristica_2', true);
+    $caracteristica_3 = get_post_meta($post->ID, '_caracteristica_3', true);
+    $caracteristica_4 = get_post_meta($post->ID, '_caracteristica_4', true);
+    $caracteristica_5 = get_post_meta($post->ID, '_caracteristica_5', true);
+
+    // Campos HTML
+    echo '<label for="caracteristica_1">Característica 1:</label>';
+    echo '<input type="text" id="caracteristica_1" name="caracteristica_1" value="' . esc_attr($caracteristica_1) . '" style="width:100%;"><br><br>';
+
+    echo '<label for="caracteristica_2">Característica 2:</label>';
+    echo '<input type="text" id="caracteristica_2" name="caracteristica_2" value="' . esc_attr($caracteristica_2) . '" style="width:100%;"><br><br>';
+
+    echo '<label for="caracteristica_3">Característica 3:</label>';
+    echo '<input type="text" id="caracteristica_3" name="caracteristica_3" value="' . esc_attr($caracteristica_3) . '" style="width:100%;"><br><br>';
+
+    echo '<label for="caracteristica_4">Característica 4:</label>';
+    echo '<input type="text" id="caracteristica_4" name="caracteristica_4" value="' . esc_attr($caracteristica_4) . '" style="width:100%;"><br><br>';
+
+    echo '<label for="caracteristica_5">Característica 5:</label>';
+    echo '<input type="text" id="caracteristica_5" name="caracteristica_5" value="' . esc_attr($caracteristica_5) . '" style="width:100%;"><br><br>';
+}
+
+// Guardar los datos de los campos
+function guardar_meta_caracteristicas_producto($post_id) {
+    if (isset($_POST['caracteristica_1'])) {
+        update_post_meta($post_id, '_caracteristica_1', sanitize_text_field($_POST['caracteristica_1']));
+    }
+    if (isset($_POST['caracteristica_2'])) {
+        update_post_meta($post_id, '_caracteristica_2', sanitize_text_field($_POST['caracteristica_2']));
+    }
+    if (isset($_POST['caracteristica_3'])) {
+        update_post_meta($post_id, '_caracteristica_3', sanitize_text_field($_POST['caracteristica_3']));
+    }
+    if (isset($_POST['caracteristica_4'])) {
+        update_post_meta($post_id, '_caracteristica_4', sanitize_text_field($_POST['caracteristica_4']));
+    }
+    if (isset($_POST['caracteristica_5'])) {
+        update_post_meta($post_id, '_caracteristica_5', sanitize_text_field($_POST['caracteristica_5']));
+    }
+}
+add_action('save_post', 'guardar_meta_caracteristicas_producto');
+add_action('woocommerce_after_single_product_summary', 'mostrar_caracteristicas_producto', 15);
+
+function mostrar_caracteristicas_producto() {
+    global $post;
+
+    // Obtener las características desde los metadatos
+    $caracteristica_1 = get_post_meta($post->ID, '_caracteristica_1', true);
+    $caracteristica_2 = get_post_meta($post->ID, '_caracteristica_2', true);
+    $caracteristica_3 = get_post_meta($post->ID, '_caracteristica_3', true);
+    $caracteristica_4 = get_post_meta($post->ID, '_caracteristica_4', true);
+    $caracteristica_5 = get_post_meta($post->ID, '_caracteristica_5', true);
+
+    // Si no hay características, no mostrar nada
+    if (!$caracteristica_1 && !$caracteristica_2 && !$caracteristica_3 && !$caracteristica_4 && !$caracteristica_5) {
+        return;
+    }
+
+    // Mostrar las características
+    echo '<div class="caracteristicas-producto columns">';
+    echo '<ul>';
+    if ($caracteristica_1) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_1) . '</li>';
+    if ($caracteristica_2) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_2) . '</li>';
+    if ($caracteristica_3) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_3) . '</li>';
+    if ($caracteristica_4) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_4) . '</li>';
+    if ($caracteristica_5) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_5) . '</li>';
+    echo '</ul>';
+    echo '</div>';
+    
+}
    //Crear, guardar y mostrar campos de caracteristicas
    //Nueva sección de caracteristicas
+
     // productos destacados
         // remuevo el normalito
         // remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',20);

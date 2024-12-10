@@ -3722,6 +3722,14 @@ main.shopPage section.contenido .productPage .caracteristicas-products h2 {
   color: black;
   font-weight: 600;
 }
+main.shopPage section.contenido .productPage .caracteristicas-products .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main.shopPage section.contenido .productPage .caracteristicas-products .caracteristicas-producto .columns .column {
+  width: 50%;
+}
 main.shopPage section.contenido .productPage .woocommerce-tabs {
   display: block;
   width: 100% !important;
