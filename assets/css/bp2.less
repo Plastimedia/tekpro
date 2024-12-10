@@ -210,8 +210,32 @@ main .blog .ancho .don-loop .bloques {
     margin: 0 auto;
 }
 
-
-
+main .blog {
+    padding: 50px;
+    position: relative;
+}
+main .blog .ancho .content-blog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    flex-direction: column;
+}
+main .blog .ancho .content-blog .contenedor-blog {
+    border: 1px solid #33BCAD;
+    border-radius: 10px;
+    width: auto;
+}
+.mercados-list .ancho .info-mercados {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    gap: 50px;
+}
 .contenedor-slide-mobil .metaslider {
 	.caption-wrap{
 		position: absolute;
@@ -328,7 +352,7 @@ header .ancho .options_shop{
 	left: 0;
 	right: 0;
 	width: 100%;
-	background: @primario;
+	background: white !important;
 	border-top: 1px solid @quinto;
 	padding: 5px 15px;
 	z-index: 1000;
@@ -379,6 +403,7 @@ header .ancho .options_shop{
 	}
 	.busquedas{
 		display: block;
+		filter: brightness(0) saturate(100%) invert(67%) sepia(81%) saturate(344%) hue-rotate(122deg) brightness(81%) contrast(94%);
 	}
 }
 body{
@@ -677,7 +702,9 @@ main .wishlist-table tbody tr{
 .contenedor-slide-mobil >p{
 	display: none;
 }
-
+.metaslider .flexslider {
+    margin-top: 0 !important;
+}
 .contenedor-slide-mobil .plastislider__slider {
 	// plasti slider
 		position: relative;
@@ -812,19 +839,14 @@ main .wishlist-table tbody tr{
 }
 }
 
-main section.categorias .ancho .grid-categorias .category:first-child p{
-	// max-width: 100%;
+main section.categorias .grid-categorias{
+	flex-direction: column;
+    margin: 0 0 20px;
 }
-main section.categorias .ancho .grid-categorias .category p{
-	// .font-size(1.1)
+main section.categorias .grid-categorias .category {
+    position: relative;
+    width: 80%;
 }
-// .producto .botones button{
-// 	width: 90%;
-// }
-// .producto {
-// 	width: 175px;
-// }
-
 main .contactanos{
 	.proporcionalcontactenos(1940,900);
 }
@@ -1475,9 +1497,6 @@ main.shopPage section.contenido .productPage .summary h1{
 
 	.container-menu .container-menu-buscador .buscador{
 		// display: none;
-	}
-	.container-menu .logo img{
-		filter:  invert(1) !important
 	}
 	header .ancho > .logo{
 		// display: none !important;
