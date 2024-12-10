@@ -782,13 +782,13 @@ function mostrar_caracteristicas_producto() {
     }
 
     // Mostrar las características
-    echo '<div class="caracteristicas-producto columns">';
-    echo '<ul>';
-    if ($caracteristica_1) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_1) . '</li>';
-    if ($caracteristica_2) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_2) . '</li>';
-    if ($caracteristica_3) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_3) . '</li>';
-    if ($caracteristica_4) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_4) . '</li>';
-    if ($caracteristica_5) echo '<li class="content-caracteristicas column">' . esc_html($caracteristica_5) . '</li>';
+    echo '<div class="caracteristicas-producto">';
+    echo '<ul class="columns">';
+    if ($caracteristica_1) echo '<li class="content-caracteristicas column caract1">' . esc_html($caracteristica_1) . '</li>';
+    if ($caracteristica_2) echo '<li class="content-caracteristicas column caract2">' . esc_html($caracteristica_2) . '</li>';
+    if ($caracteristica_3) echo '<li class="content-caracteristicas column caract3">' . esc_html($caracteristica_3) . '</li>';
+    if ($caracteristica_4) echo '<li class="content-caracteristicas column caract4">' . esc_html($caracteristica_4) . '</li>';
+    if ($caracteristica_5) echo '<li class="content-caracteristicas column caract5">' . esc_html($caracteristica_5) . '</li>';
     echo '</ul>';
     echo '</div>';
     

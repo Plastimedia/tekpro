@@ -3180,21 +3180,75 @@ main {
         //summary
         .contenidogeneral {
           width: 100%;
-        }
+        
         .caracteristicas-products{
           text-align: center;
           h2{
             color: black;
             font-weight: 600;
+            font-size: 2rem;
           }
-          .columns{
-            display: flex;
-          }
-          .caracteristicas-producto .columns .column{
-            width: 50%;
+          p{
+            font-weight: 400;
+            color: #333333;
           }
         }
-
+        .caracteristicas-products::before{
+          content: "";
+          position: absolute;
+          height: 48px;
+          width: 96px;
+          background-image: url(../images/puntos2.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          right: 0;
+          -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+        .caracteristicas-producto{
+          padding: 50px 0;
+        }
+          .caracteristicas-producto .columns{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px;
+          }
+          .caracteristicas-producto .columns .column{
+            list-style: none;
+            width: calc(50% - 20px);
+            text-align: center;
+            padding: 20px;
+            align-items: center;
+            display: flex;
+            font-weight: 400;
+            color: #333333;
+          }
+          .content-caracteristicas::before {
+            content: '';
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .caract1::before{
+            background-image: url('../images/estrella-agua.png');
+          }
+          .caract2::before{
+            background-image: url('../images/estrella-cafe.png');
+          }
+          .caract3::before{
+            background-image: url('../images/estrella-azul.png');
+          }
+          .caract4::before{
+            background-image: url('../images/estrella-naranja.png');
+          }
+          .caract5::before{
+            background-image: url('../images/estrella-agua.png');
+          }
+      }
         .woocommerce-tabs {
           display: block;
           width: 100% !important;
@@ -3296,7 +3350,7 @@ main {
             font-weight: 700;
             position: relative;
             padding-bottom: 5px;
-            color: @primario;
+            color: black;
             text-align: center;
 
             &::before {
@@ -3312,6 +3366,20 @@ main {
               border-radius: 3px;
             }
           }
+          h2::after{
+            content: "";
+            position: absolute;
+            height: 48px;
+            width: 96px;
+            background-image: url(../images/puntos2.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 0;
+            bottom: 30px;
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+          }
         }
       }
 
@@ -3323,7 +3391,9 @@ main {
 
   // tienda
 }
-
+.woocommerce-message {
+  border-top-color: @primario
+}
 // @Servicios
 .servicios-section {
   .my-grid(3px);

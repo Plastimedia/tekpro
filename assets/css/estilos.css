@@ -3715,20 +3715,81 @@ main.shopPage section.contenido .productPage .summary .sharedaddy .robots-nocont
 main.shopPage section.contenido .productPage .contenidogeneral {
   width: 100%;
 }
-main.shopPage section.contenido .productPage .caracteristicas-products {
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-products {
   text-align: center;
 }
-main.shopPage section.contenido .productPage .caracteristicas-products h2 {
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-products h2 {
   color: black;
   font-weight: 600;
+  font-size: 2rem;
 }
-main.shopPage section.contenido .productPage .caracteristicas-products .columns {
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-products p {
+  font-weight: 400;
+  color: #333333;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-products::before {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 96px;
+  background-image: url(../images/puntos2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-producto {
+  padding: 50px 0;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-producto .columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 10px;
 }
-main.shopPage section.contenido .productPage .caracteristicas-products .caracteristicas-producto .columns .column {
-  width: 50%;
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-producto .columns .column {
+  list-style: none;
+  width: calc(50% - 20px);
+  text-align: center;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  color: #333333;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .content-caracteristicas::before {
+  content: '';
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caract1::before {
+  background-image: url('../images/estrella-agua.png');
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caract2::before {
+  background-image: url('../images/estrella-cafe.png');
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caract3::before {
+  background-image: url('../images/estrella-azul.png');
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caract4::before {
+  background-image: url('../images/estrella-naranja.png');
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caract5::before {
+  background-image: url('../images/estrella-agua.png');
 }
 main.shopPage section.contenido .productPage .woocommerce-tabs {
   display: block;
@@ -3808,7 +3869,7 @@ main.shopPage section.contenido .productPage .related h2 {
   font-weight: 700;
   position: relative;
   padding-bottom: 5px;
-  color: #33BCAD;
+  color: black;
   text-align: center;
 }
 main.shopPage section.contenido .productPage .related h2::before {
@@ -3823,6 +3884,23 @@ main.shopPage section.contenido .productPage .related h2::before {
   width: 10px;
   height: 3px;
   border-radius: 3px;
+}
+main.shopPage section.contenido .productPage .related h2::after {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 96px;
+  background-image: url(../images/puntos2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 30px;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.woocommerce-message {
+  border-top-color: #33BCAD;
 }
 .servicios-section {
   display: block;
