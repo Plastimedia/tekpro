@@ -148,7 +148,7 @@ if (empty($product) || ! $product->is_visible()) {
 						// Botón de "Compra rápida"
 						//echo '<a href="?add-to-cart=' . $product->get_id() .  '" class="button quick-buy-button">Añadir al carrito</a>';
 					?>
-					<a class="read" href="<?php echo get_the_permalink();  ?>">Ver producto</a>
+					<!-- <a class="read" href="<?php echo get_the_permalink();  ?>">Ver producto</a> -->
 		</div>
 	</div>
 	<?php

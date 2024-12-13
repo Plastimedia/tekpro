@@ -1590,12 +1590,12 @@ body.category main {
 .producto h3 {
   color: #333;
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 5px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
+  -webkit-transition: all 0.5s !important;
+  transition: all 0.5s !important;
   text-align: left;
-  padding: 5px 15px 0;
+  padding: 5px 15px 0 !important;
 }
 .producto h3 a {
   color: #333;
@@ -2911,17 +2911,16 @@ main.shopPage {
   padding-top: 150px;
 }
 main.shopPage .migas {
-  background: #fff;
+  background: #33BCAD;
   width: 100%;
   padding: 10px 7px;
-  margin-bottom: 5px;
-  color: #6a6a6a;
+  color: #ffffff;
 }
 main.shopPage .migas .breadcrumbs {
-  color: #6a6a6a;
+  color: #ffffff;
 }
 main.shopPage .migas a {
-  color: #6a6a6a;
+  color: #ffffff;
   font-size: 17px;
   font-size: 1rem;
   font-weight: 600 !important;
@@ -2937,10 +2936,30 @@ main.shopPage .migas a span {
   font-weight: 600;
 }
 main.shopPage .migas .current-item {
-  color: #6a6a6a;
+  color: #ffffff;
   font-size: 17px;
   font-size: 1rem;
   font-weight: 600;
+}
+main.shopPage .bannerTienda {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+main.shopPage .bannerTienda img {
+  width: 100%;
+}
+main.shopPage .bannerTienda h2 {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  z-index: 20;
+  bottom: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 70px;
+  font-weight: 200;
 }
 main.shopPage .las_subcategorias {
   padding: 0;
@@ -3101,7 +3120,6 @@ main.shopPage #review_form #respond .form-submit input.submit:hover::before {
 }
 main.shopPage aside {
   width: 300px;
-  border-right: 2px solid #f2f2f2;
   padding: 15px 20px 15px 30px;
 }
 main.shopPage aside .content {
@@ -3109,12 +3127,14 @@ main.shopPage aside .content {
   top: 80px;
 }
 main.shopPage aside h2 {
-  color: black;
+  color: #2F806F;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   font-size: 20.4px;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #333333;
 }
 main.shopPage aside h2.categorias {
   text-align: left;
@@ -3132,8 +3152,10 @@ main.shopPage aside h2.categorias::before {
   transform: translateY(25%);
   margin-right: 15px;
 }
+main.shopPage aside .wc-block-components-checkbox {
+  margin: 0;
+}
 main.shopPage aside .wc-block-product-categories.is-list {
-  border-bottom: 2px solid #dedede;
   padding-bottom: 15px;
 }
 main.shopPage aside .wc-block-product-categories.is-list > ul {
@@ -3143,11 +3165,10 @@ main.shopPage aside .wc-block-product-categories.is-list > ul > li.current-menu-
   padding: 0 5px;
   background: #f2f2f2;
   border-radius: 10px;
-  color: #33BCAD;
 }
 main.shopPage aside .wc-block-product-categories.is-list > ul > li > a {
-  color: #33BCAD;
-  font-weight: 600;
+  color: #333333;
+  font-weight: 400;
   font-size: 17px;
   font-size: 1rem;
   padding: 5px 0;
@@ -3251,6 +3272,10 @@ main.shopPage section.contenido h1 {
   font-size: 1.8rem;
   color: black;
   font-family: "Roboto", sans-serif;
+}
+main.shopPage section.contenido .page-title {
+  background-color: red;
+  display: none;
 }
 main.shopPage section.contenido .term-description {
   display: none;
@@ -8053,16 +8078,13 @@ span.woocommerce-input-wrapper {
   font-size: 17px;
   font-size: 1rem;
 }
-.archive .producto,
 .single-product .producto {
   background-color: transparent;
   border-radius: 15px;
 }
-.archive .producto .thumbnail::after,
 .single-product .producto .thumbnail::after {
   display: none;
 }
-.archive .producto h3 a,
 .single-product .producto h3 a {
   color: #3E3539;
   font-weight: 400;
@@ -8070,14 +8092,12 @@ span.woocommerce-input-wrapper {
   font-size: 17px;
   font-size: 1rem;
 }
-.archive .producto .precios p,
 .single-product .producto .precios p {
   font-weight: 700;
   color: #3E3539;
   font-size: 20.4px;
   font-size: 1.2rem;
 }
-.archive .producto .botones2 .read,
 .single-product .producto .botones2 .read {
   color: white;
   background-color: #5DC4E9;
@@ -8233,6 +8253,10 @@ span.woocommerce-input-wrapper {
 }
 .woocommerce div.product form.cart div.quantity input.qty {
   margin: 0 5px;
+}
+.single-product .migas,
+.single-product .bannerTienda {
+  display: none;
 }
 .sticky-wrapper {
   max-height: 0;

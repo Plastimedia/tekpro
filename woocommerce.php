@@ -14,8 +14,11 @@
 					</div> 
 				</div>
 			</div>
+			<div class="bannerTienda">
+				<img src="https://sitios.plastimedia.com/tekpro/wp-content/uploads/2024/11/banner1.png" alt="">
+				<h2>Universo <strong id="name-category"></strong></h2>
+			</div>
 			<div class="tienda">
-
 				<aside class="navegacion">
 					<div class="content">
 						
@@ -23,7 +26,7 @@
 						<?php endif; ?>
 						
 						
-						<h2 class="wp-block-heading">Categorías</h2>
+						<h2 class="wp-block-heading">Universos</h2>
 							<?php
 							wp_nav_menu(array('theme_location' => 'menu-tienda-comercial', 'container_class' => 'wp-block-woocommerce-product-categories wc-block-product-categories is-list '));
 							?>
@@ -42,6 +45,7 @@
 		<script>
 			$(document).ready(function(){
 				var titulo = $("h1").text();
+				$("#name-category").text(titulo)
 				$(".wc-block-product-categories-list-item").each(function(){
 					if($(this).children("a").text() == titulo){
 						$(this).addClass('current-menu-item')

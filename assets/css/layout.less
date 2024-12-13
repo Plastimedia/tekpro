@@ -854,11 +854,11 @@ body.category {
   h3 {
     color: #333;
     font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 5px;
-    transition: all 0.5s;
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+    transition: all 0.5s !important;
     text-align: left;
-    padding: 5px 15px 0;
+    padding: 5px 15px 0 !important;
     // padding-top: 15px;
 
     a {
@@ -2273,19 +2273,18 @@ main {
 
     .migas {
       // background: @quinto;
-      background: #fff;
+      background: @primario;
       width: 100%;
       padding: 10px 7px;
-      margin-bottom: 5px;
-      color: #6a6a6a;
+      color: #ffffff;
 
       .breadcrumbs {
-        color: #6a6a6a;
+        color: #ffffff;
 
       }
 
       a {
-        color: #6a6a6a;
+        color: #ffffff;
         .font-size(1);
         font-weight: 600 !important;
         transition: all 0.5s;
@@ -2302,9 +2301,28 @@ main {
       }
 
       .current-item {
-        color: #6a6a6a;
+        color: #ffffff;
         .font-size(1);
         font-weight: 600;
+      }
+    }
+    .bannerTienda{
+      width: 100%;
+      position: relative;
+      margin-bottom: 50px;
+      img{
+        width: 100%;
+      }
+      h2{
+        color: white;
+        position: absolute;
+        display: inline-block;
+        z-index: 20;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 70px;
+        font-weight: 200;
       }
     }
 
@@ -2469,7 +2487,7 @@ main {
 
     aside {
       width: 300px;
-      border-right: 2px solid #f2f2f2;
+      // border-right: 2px solid #f2f2f2;
       padding: 15px 20px 15px 30px;
 
       .content {
@@ -2478,11 +2496,13 @@ main {
       }
 
       h2 {
-        color: black;
+        color: #2F806F;
         font-weight: 700;
         font-family: @fuenteComun;
         .font-size(1.2);
-        text-align: center;
+        text-align: left;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #333333;
 
         &.categorias {
           text-align: left;
@@ -2501,9 +2521,11 @@ main {
           }
         }
       }
-
+      .wc-block-components-checkbox{
+        margin: 0;
+      }
       .wc-block-product-categories.is-list {
-        border-bottom: 2px solid #dedede;
+        // border-bottom: 2px solid #dedede;
         padding-bottom: 15px;
 
         >ul {
@@ -2515,13 +2537,13 @@ main {
                 padding: 0 5px;
                 background: #f2f2f2;
                 border-radius: 10px;
-                color: @primario;
+                
               }
             }
 
             >a {
-              color: @primario;
-              font-weight: 600;
+              color: #333333;
+              font-weight: 400;
               .font-size(1);
               padding: 5px 0;
               position: relative;
@@ -2648,6 +2670,10 @@ main {
         .font-size(1.8);
         color: black;
         font-family: @fuenteComun;
+      }
+      .page-title{
+        background-color: red;
+        display: none;
       }
 
       .term-description {
@@ -7807,7 +7833,7 @@ span.woocommerce-input-wrapper {
 
 
 // page tienda
-.archive,
+
 .single-product {
   .producto {
     background-color: transparent;
@@ -8000,3 +8026,9 @@ span.woocommerce-input-wrapper {
   }
 }
 //seccion woocommerce vista interna de productos
+
+.single-product{
+  .migas, .bannerTienda{
+    display: none;
+  }
+}
