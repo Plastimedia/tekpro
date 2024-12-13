@@ -363,9 +363,15 @@
 <!--sección marcas aliadas-->
 <div class="seccion-marcas">
   <div class="ancho">
-    <div class="info-marcas">
-      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Marcas')): ?>
-      <?php endif; ?>
+    <div class="info-marcas splide_marcas">
+      <div class="splide__track">
+        <div class="splide__list marcas">
+          <div class="splide__slide marca">
+          <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Marcas')): ?>
+          <?php endif; ?>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -563,20 +569,20 @@
       },
     }).mount();
 
-    // new Splide( '.splide_blogs', {
-    //   //type   : 'loop',
-    //   perPage: 2,
-    //   perMove: 1,
-    //   rewind : true,
-    //   breakpoints: {
-    //     1024: {
-    //       perPage: 2
-    //     },
-    //     768: {
-    //       perPage: 1
-    //     }
-    //   },
-    // } ).mount();
+    new Splide( '.splide_marcas', {
+      type   : 'loop',
+      perPage: 1,
+      perMove: 1,
+      rewind : true,
+      breakpoints: {
+        1024: {
+          perPage: 2
+        },
+        768: {
+          perPage: 1
+        }
+      },
+    } ).mount();
 
 
   });

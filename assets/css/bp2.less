@@ -2,7 +2,7 @@
 
 
 header{
-	position: relative;
+	position: fixed;
 	
 }
 header .ancho {
@@ -225,6 +225,7 @@ main .blog .ancho .content-blog .contenedor-blog {
     border: 1px solid #33BCAD;
     border-radius: 10px;
     width: auto;
+	transform: translate(0, 0);
 }
 .mercados-list .ancho .info-mercados {
     display: -webkit-box;
@@ -235,6 +236,7 @@ main .blog .ancho .content-blog .contenedor-blog {
     -ms-flex-direction: row;
     flex-direction: column;
     gap: 50px;
+	align-items: center;
 }
 .contenedor-slide-mobil .metaslider {
 	.caption-wrap{
@@ -1332,8 +1334,12 @@ main.shopPage section.contenido .productPage .summary h1{
 	}
 
 
-	
-
+	#ModalSearch form div input[type="search"]{
+		border:2px solid #5DC4E9 !important;
+	}
+    #ModalSearch form div button {
+        background-color:#5DC4E9 !important;
+    }
 
 
 	.seleccionador .mundo h2{
@@ -1554,17 +1560,17 @@ border: 1px solid @primario;
 }
  ul{
 	display: block;
-	background-color: #9E9E9E;
+	background-color: white;
 	//background-color: fade(@primario, 70);
 	height: 100%;
 	padding-top: 100px;
 	position: relative;
 	z-index: 2;
 	> li{
-		display: block;
-		float: none;
-		margin: 0;
-		border-bottom: 1px solid white;
+        display: block;
+        float: none;
+        margin: 0;
+        border-bottom: 1px solid #33BCAD;
 		&:last-child{
 			>a::before{
 				display: none;
@@ -1573,7 +1579,7 @@ border: 1px solid @primario;
 		> a{
 			border: none;
 			position: relative;
-			color: @textoClaro;
+			color: black;
 			.transition(all, 0.2, ease-out, 0);
 			padding: 10px 5px;
 			
@@ -1700,7 +1706,8 @@ z-index: 10010;
 }
 #btn_menu{
 display: block;
-margin-right: 45px;
+margin-right: 40px;
+filter: brightness(0) saturate(100%) invert(56%) sepia(62%) saturate(447%) hue-rotate(124deg) brightness(100%) contrast(88%);
 }
 
 .menu-ppl>ul>li:hover>a{
@@ -1812,7 +1819,7 @@ main section.categorias .ancho .grid-categorias .category .botones a, main secti
 }
 
 main.shopPage{
-	padding-top: 0 !important;
+	padding-top: 100px !important;
 }
 
 
@@ -1838,4 +1845,81 @@ main .splide--slide .splide__arrows .splide__arrow--next{
 }
 main .splide--slide .splide__arrows .splide__arrow--prev{
 	left: -10px !important;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-producto .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-direction: column;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-producto .columns .column {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    color: #333333;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .content-caracteristicas::before {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+main.shopPage .bannerTienda h2 {
+    color: white;
+    position: absolute;
+    display: flex;
+    z-index: 20;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    font-size: 30px; 
+    font-weight: 200;
+    margin: auto;
+    gap: 10px;
+}
+main.shopPage section.contenido .productPage .contenidogeneral .caracteristicas-products::before {
+    content: "";
+    position: absolute;
+    height: 48px;
+    width: 70px;
+    background-image: url(../images/puntos2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+main.shopPage section.contenido .productPage .related h2::after {
+    content: "";
+    position: absolute;
+    height: 48px;
+    width: 70px;
+    background-image: url(../images/puntos2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 30px;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.single .migas{
+	display: block;
 }
