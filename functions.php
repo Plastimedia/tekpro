@@ -695,6 +695,65 @@
    //Pestaña de descripcion larga y reseñas 
    remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
    //Pestaña de descripcion larga y reseñas
+    //Venta por pagina o venta por asesoria
+    function agregar_tipo_venta_meta_box() {
+        add_meta_box(
+            'tipo_venta_meta',
+            'Tipo de Venta',
+            'mostrar_tipo_venta_meta_box',
+            'product',
+            'side',
+            'default'
+        );
+    }
+    add_action('add_meta_boxes', 'agregar_tipo_venta_meta_box');
+    
+    function mostrar_tipo_venta_meta_box($post) {
+        $tipo_venta = get_post_meta($post->ID, '_tipo_venta', true);
+        ?>
+        <select name="tipo_venta" id="tipo_venta">
+            <option value="directa" <?php selected($tipo_venta, 'directa'); ?>>Venta Directa</option>
+            <option value="asesoria" <?php selected($tipo_venta, 'asesoria'); ?>>Con Asesoría</option>
+        </select>
+        <?php
+    }
+    
+    function guardar_tipo_venta_meta($post_id) {
+        if (isset($_POST['tipo_venta'])) {
+            update_post_meta($post_id, '_tipo_venta', sanitize_text_field($_POST['tipo_venta']));
+        }
+    }
+    add_action('save_post', 'guardar_tipo_venta_meta');
+    
+    // Eliminar el botón "Añadir al carrito" si el producto es de tipo 'asesoria'.
+    add_action('woocommerce_single_product_summary', 'eliminar_boton_carrito_para_asesoria', 1);
+    function eliminar_boton_carrito_para_asesoria() {
+        global $product;
+        $tipo_venta = get_post_meta($product->get_id(), '_tipo_venta', true);
+
+        if ($tipo_venta === 'asesoria') {
+            // Eliminar el botón de añadir al carrito ANTES de que se renderice.
+            remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+        }
+    }
+
+    // Mostrar el botón de WhatsApp si el producto requiere asesoría.
+    add_action('woocommerce_single_product_summary', 'mostrar_boton_asesoria', 35);
+    function mostrar_boton_asesoria() {
+        global $product;
+        $tipo_venta = get_post_meta($product->get_id(), '_tipo_venta', true);
+
+        if ($tipo_venta === 'asesoria') {
+            // Muestra el botón de WhatsApp
+            echo '<a href="https://wa.me/1234567890?text=Estoy+interesado+en+el+producto:+'. urlencode($product->get_name()) .'" 
+                    class="button alt venta-asesoria" target="_blank"
+                    style="background-color:#25D366; color:white; text-align:center; padding:20px; border-radius:5px; text-decoration:none;">
+                    Contactar por WhatsApp
+                </a>';
+        }
+    }
+
+    //Venta por pagina o venta por asesoria
 
    //Nueva seccion de caracteristicas
    add_action('woocommerce_after_single_product_summary', 'caracteristicas_productos', 10);
